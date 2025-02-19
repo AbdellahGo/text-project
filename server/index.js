@@ -4,12 +4,12 @@ import cors from 'cors';
 import { fileURLToPath } from 'url';
 import { products } from './products.js';
 
-
+const port =  8080
 
 
 const app = express();
 
-const PORT = 3000;
+
 
 // Fix __dirname for ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -26,6 +26,6 @@ app.get('/api/products', (req, res) => {
   res.json(products);
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });
