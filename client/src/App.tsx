@@ -15,7 +15,7 @@ type products = {
 const App = () => {
   const [products, setProducts] = useState<products | []>([])
   const fetchProducts = async () => {
-    const res = (await axios.get('http://localhost:3000/api/products')).data
+    const res = (await axios.get('https://text-project.onrender.com/api/products')).data
     setProducts(res)
   }
   useEffect(() => {
@@ -28,7 +28,7 @@ const App = () => {
         <div className="bg-gray-200 p-[30px]">
           <h1 className="bg-gray-100 flex items-center justify-center w-[50px] mb-[20px] border-1 border-amber-400 h-[50px] mx-auto text-[30px] font-bold">{id}</h1>
           <div className="w-[300px] h-[300px] mx-auto">
-            <img src={`http://localhost:3000${primaryImage}`} className="w-full h-full object-cover" alt="" />
+            <img src={`https://text-project.onrender.com${primaryImage}`} className="w-full h-full object-cover" alt="" />
           </div>
           <h1 className="text-[25px] mt-[20px] font-semibold text-center border-b-1 border-orange-500 pb-[8px]">
             {title}
